@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Component Library</title>
 </head>
+
 <body>
-    
     <h1>Aman's Component Library</h1>
 
     <p>This is a component library which will be used for making website good.</p>
@@ -16,12 +18,13 @@
 
     <h2>@typography</h2>
 
-    <h1>This is the biggest headiing.</h1>
+    <h1>This is the biggest heading h1.</h1>
 
-    <h2>This is the second biggest heading.</h2>
+    <h2>This is the second biggest heading h2.</h2>
 
     <p>This is the normal text, also called as paragraph.</p>
 
+    <p>This line contains <b>bold</b> text.</p>
     <small>This is a very small text</small>
 
     <hr>
@@ -29,36 +32,37 @@
     <h2>@container</h2>
 
     <h3>fluid container</h3>
-    <p>This container will cover the entire row and go till the end.</p>
+    <div class="container">This container will cover the entire row and go till the end.</div>
 
     <h3>center container</h3>
-    <p>This container will be positioned to the center</p>
+    <div class="container-center">This container will be positioned to the center</div>
 
     <h2>@links</h2>
 
-    <a href="/">Primary link</a>
-    <a href="/">Secondary link</a>
+    <a href="#" class="links link-primary">Primary link</a>
+    <a href="#" class="links link-secondary">Secondary link</a>
 
     <hr>
 
     <h2>@lists</h2>
 
     <h3>unordered lists</h3>
-    <ul>
+    <p>This list don't have bullets.</p>
+    <ul class="list-non-bullet">
         <li>item one</li>
         <li>item two</li>
         <li>item three</li>
     </ul>
 
     <h3>unordered inline lists</h3>
-    <ul>
-        <li>inline list one</li>
-        <li>inline list one</li>
-        <li>inline list one</li>
+    <ul class="list-non-bullet">
+        <li class="list-inline">inline list one</li>
+        <li class="list-inline">inline list two</li>
+        <li class="list-inline">inline list three</li>
     </ul>
 
     <h3>reversed order list</h3>
-    <ol type="reverse">
+    <ol reversed>
         <li>three</li>
         <li>two</li>
         <li>one</li>
@@ -68,41 +72,75 @@
 
     <h2>@nav bar</h2>
 
-    <h3>BrandName</h3>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Blogs</a></li>
-        <li><a href="/">About</a></li>
-    </ul>
+    <p>This navigation bar will be placed at top and will contain links
+        to other pages.
+    </p>
+
+    <nav class="navigation container">
+        <div class="nav-brand">BrandName</div>
+        <ul class="nav-links">
+            <li class="list-inline">
+                <a href="/" class="links link-active">Home</a>
+            </li>
+            <li class="list-inline">
+                <a href="/" class="links">Blogs</a>
+            </li>
+            <li class="list-inline">
+                <a href="/" class="links">About</a>
+            </li>
+        </ul>
+
+    </nav>
 
     <hr>
 
     <h2>@header</h2>
 
-    <header>
-        <img src="/images/profile.svg" alt="">
-        <h1>profile inside header</h1>
+    <header class="profile">
+        <img class="profile-img" src="/images/profile.svg" alt="">
+        <h1 class="profile-heading">Aman Deep Kujur, 
+            <span class="profile-profession">The Web Developer</span></h1>
     </header>
 
     <hr>
 
     <h2>@section</h2>
 
-    <h3>section 1</h3>
-    <p>This section will have white color background</p>
+    <section class="section">
+        <div class="container container-center">
+            <h1>section 1 White Background</h1>
+            <p>This section will have white color background</p>
+        </div>
+    </section>
 
-    <h3>section 2</h3>
-    <p>This section will have gray color background</p>
+    <section class="section off-white">
+        <div class="container container-center">
+            <h1>section 2 White Background</h1>
+            <p>This section will have gray color background</p>  
+        </div>
+    </section>
 
     <hr>
 
     <h2>@footer</h2>
-    
-    <ul>
-        <li><a href="/">Twitter</a></li>
-        <li><a href="/">Facebook</a></li>
-        <li><a href="/">LinkedIn</a></li>
-    </ul>
+
+    <footer class="footer">
+        <div class="footer-header">
+            This is a footer section.
+        </div>
+        <ul class="social-links">
+            <li class="list-inline">
+                <a class="links" href="/">Twitter</a>
+            </li>
+            <li class="list-inline">
+                <a class="links" href="/">Facebook</a>
+            </li>
+            <li class="list-inline">
+                <a class="links" href="/">LinkedIn</a>
+            </li>
+        </ul>
+    </footer>
 
 </body>
+
 </html>
